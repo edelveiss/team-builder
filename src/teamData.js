@@ -5,7 +5,7 @@ const teamData = [
     lastName: "Speedwagon",
     role: "Project architect",
     email: "marioSpeedwagon@gmail.com",
-    image: "https://loremflickr.com/320/240",
+    image: "https://images.dog.ceo/breeds/hound-blood/n02088466_9576.jpg",
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const teamData = [
     lastName: "Cruiser",
     role: "Project manager",
     email: "peteyCruiser@gmail.com",
-    image: "https://loremflickr.com/320/240",
+    image: "https://images.dog.ceo/breeds/hound-english/n02089973_3307.jpg",
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const teamData = [
     lastName: "Sthesia",
     role: "UI/UX designer",
     email: "annaSthesia@gmail.com",
-    image: "https://loremflickr.com/320/240",
+    image: "https://images.dog.ceo/breeds/hound-afghan/n02088094_8063.jpg",
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ const teamData = [
     lastName: "Molive",
     role: "UI/UX designer",
     email: "paulMolive@gmail.com",
-    image: "https://loremflickr.com/320/240",
+    image: "https://images.dog.ceo/breeds/hound-walker/n02089867_1882.jpg",
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ const teamData = [
     lastName: "Mull",
     role: "Web developer",
     email: "annaMull@gmail.com",
-    image: "https://loremflickr.com/320/240",
+    image: "https://images.dog.ceo/breeds/hound-blood/n02088466_6834.jpg",
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ const teamData = [
     lastName: "Forcewind",
     role: "Web developer",
     email: "gailForcewind@gmail.com",
-    image: "https://loremflickr.com/320/240",
+    image: "https://images.dog.ceo/breeds/hound-basset/n02088238_11281.jpg",
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ const teamData = [
     lastName: "Frapples",
     role: "Web developer",
     email: "bobFrapples@gmail.com",
-    image: "https://loremflickr.com/320/240",
+    image: "https://images.dog.ceo/breeds/hound-english/n02089973_3119.jpg",
   },
 ];
 export default teamData;

@@ -3,11 +3,25 @@ import { Route, Link, Switch } from "react-router-dom";
 import Home from "./components/Home";
 import TeamList from "./components/TeamList";
 import Member from "./components/Member";
+import MemberEdit from "./components/MemberEdit";
 import "./App.css";
 import teamData from "./teamData";
 
 function App() {
   const [team, setTeam] = useState(teamData);
+
+  const addNewMember = (member) => {
+    const newMember = {
+      id: team.length + 1,
+      firstName: member.firstName,
+      lastName: member.lastName,
+      role: member.role,
+      email: member.email,
+      image: member.image,
+    };
+
+    setTeam([...team, newMember]);
+  };
 
   return (
     <div className="App">
@@ -30,14 +44,13 @@ function App() {
           </Link>
         </div>
       </nav>
-
       <Switch>
         <Route path="/team-list/:memberID">
           <Member member={team} />
         </Route>
 
         <Route path="/team-list">
-          <TeamList team={team} />
+          <TeamList team={team} addNewMember={addNewMember} />
         </Route>
         <Route path="/">
           <Home />

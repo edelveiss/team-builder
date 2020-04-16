@@ -1,6 +1,16 @@
 import React from "react";
 import MemberEdit from "./MemberEdit";
 import {
+  Card,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  ButtonToggle,
+  Col,
+} from "reactstrap";
+import {
   useParams,
   Route,
   Link,
@@ -11,41 +21,65 @@ import {
 
 function Member(props) {
   console.log("Props memeber", props.member);
-  //const { itemID } = useParams();
-  const memId = useParams();
-  console.log("memId", memId);
-  //const match = useRouteMatch();
-  //console.log("match", match);
+  const { memberID } = useParams();
+  //const memId = useParams();
+  console.log("memId", { memberID });
+  const match = useRouteMatch();
+  console.log("match", match);
   const { path, url } = useRouteMatch();
   //   path: "/team-list/:itemID"
   // url: "/team-list/1"
+  console.log(`${url}/edit`, `${url}/edit`);
+  console.log(`${path}/edit`, `${path}/edit`);
   const teamMember = props.member.find(
-    (person) => person.id === Number(itemID)
+    (person) => person.id === Number(memberID)
   );
   console.log("teamMember", teamMember);
   return (
-    <div className="item-wrapper">
-      <div className="item-header">
-        <div className="image-wrapper">
-          <img src={teamMember.image} alt={teamMember.firstName} />
-        </div>
-        <div className="item-title-wrapper">
-          <h2>
+    <div>
+      <Card
+        style={{
+          width: "30rem",
+          margin: "auto",
+          marginTop: "1rem",
+          marginBottom: "1rem",
+        }}
+      >
+        <CardImg
+          top
+          width="10%"
+          src={teamMember.image}
+          alt={teamMember.firstName}
+        />
+        <CardBody>
+          <CardTitle>{teamMember.role}</CardTitle>
+          <CardSubtitle>
             {teamMember.firstName} {teamMember.lastName}
-          </h2>
-          <h4>${teamMember.role}</h4>
+          </CardSubtitle>
+          <CardText>{teamMember.email}</CardText>
+          <ButtonToggle color="primary">Edit</ButtonToggle>
+        </CardBody>
+      </Card>
 
-          <nav className="item-sub-nav">
-            <Link to={`/team-list/${teamMember.id}/edit`}>Edit</Link>
-          </nav>
-        </div>
-      </div>
-
-      <Route path={`${path}/edit`}>
-        <MemberEdit person={teamMember} />
-      </Route>
+      <Switch>
+        <Route path={`${path}/edit`}>
+          <MemberEdit person={teamMember} />
+        </Route>
+      </Switch>
     </div>
   );
 }
 export default Member;
 //const { itemID } = useParams();
+
+// <img src={teamMember.image} alt={teamMember.firstName} />
+// </div>
+// <div className="item-title-wrapper">
+//   <h2>
+//     {teamMember.firstName} {teamMember.lastName}
+//   </h2>
+//   <h4>{teamMember.role}</h4>
+
+// <nav className="item-sub-nav">
+//             <Link to={`${url}/edit`}>Edit</Link>
+//           </nav>
