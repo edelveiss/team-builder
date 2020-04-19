@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import MemberEdit from "./MemberEdit";
+//import EnterInfo from "./EnterInfo";
 import {
   Card,
   CardImg,
@@ -7,8 +8,12 @@ import {
   CardBody,
   CardTitle,
   CardSubtitle,
-  ButtonToggle,
+  Button,
   Col,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
 } from "reactstrap";
 import {
   useParams,
@@ -20,8 +25,12 @@ import {
 } from "react-router-dom";
 
 function Member(props) {
-  console.log("Props memeber", props.member);
+  console.log("Props memeber props", props);
   const { memberID } = useParams();
+
+  const [modal, setModal] = useState(false);
+  const toggle = () => setModal(!modal);
+
   //const memId = useParams();
   console.log("memId", { memberID });
   const match = useRouteMatch();
@@ -57,7 +66,15 @@ function Member(props) {
             {teamMember.firstName} {teamMember.lastName}
           </CardSubtitle>
           <CardText>{teamMember.email}</CardText>
-          <ButtonToggle color="primary">Edit</ButtonToggle>
+          <Button onClick={toggle} color="primary" style={{ width: "5rem" }}>
+            Edit
+          </Button>
+          <MemberEdit
+            isOpen={modal}
+            toggle={toggle}
+            teamMember={teamMember}
+            editMember={props.editMember}
+          />
         </CardBody>
       </Card>
 

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import dog from "./dog.jpg";
 import {
   Container,
   Row,
@@ -14,6 +15,7 @@ import {
   Input,
   FormText,
 } from "reactstrap";
+//console.log("dog", dog);
 
 const EnterInfo = (props) => {
   const [newMember, setNewMember] = useState({
@@ -21,11 +23,13 @@ const EnterInfo = (props) => {
     lastName: "",
     role: "",
     email: "",
-    image: "",
+    //image: "https://loremflickr.com/320/240?random=8",
   });
 
+  useEffect(() => {}, [newMember]);
+
   const handleChanges = (event) => {
-    console.log("event", event.target.value);
+    console.log("Enter info event", event.target.value);
     setNewMember({ ...newMember, [event.target.name]: event.target.value });
   };
 
@@ -38,7 +42,7 @@ const EnterInfo = (props) => {
       lastName: "",
       role: "",
       email: "",
-      image: "",
+      //image: "https://loremflickr.com/320/240?random=8",
     });
   };
 

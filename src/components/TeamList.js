@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import TextField from "@material-ui/core/TextField";
+import { makeStyles } from "@material-ui/core/styles";
 import {
   Container,
   Row,
@@ -20,6 +22,10 @@ import "../App.css";
 function TeamList(props) {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState(props.team);
+
+  useEffect(() => {
+    setSearchResults(props.team);
+  }, [props.team]);
   console.log("TeamList", props);
   console.log("searchResults", searchResults);
 
@@ -43,21 +49,21 @@ function TeamList(props) {
   return (
     <Container style={{ marginRight: "unset", marginTop: "1rem" }}>
       <Row>
-        <FormGroup style={{ width: "60%" }}>
-          <Label for="role"></Label>
-          <Input
-            type="text"
-            name="textfield"
-            id="role"
-            placeholder="Search by role"
-            onChange={handleChange}
-            style={{ width: "80%" }}
-          />
-        </FormGroup>
+        <TextField
+          id="outlined-search"
+          label="Search by role"
+          name="textfield"
+          type="search"
+          variant="outlined"
+          id="role"
+          onChange={handleChange}
+          style={{ width: "40%", marginRight: "16rem", marginLeft: "3rem" }}
+        />
+
         <Button
           onClick={toggle}
           color="primary"
-          style={{ height: "3rem", marginTop: "1rem", marginRight: "1rem" }}
+          style={{ height: "3rem", marginTop: "0.1rem", marginRight: "1rem" }}
         >
           Add New Member
         </Button>
