@@ -39,7 +39,7 @@ function TeamList(props) {
     });
     console.log("search results", results);
     setSearchResults(results);
-  }, [searchTerm, props.team]);
+  }, [searchTerm]);
 
   const handleChange = (event) => {
     setSearchTerm(event.target.value);
