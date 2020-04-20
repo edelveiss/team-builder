@@ -8,7 +8,7 @@ import "./App.css";
 import teamData from "./teamData";
 import "bootstrap/dist/css/bootstrap.css";
 import Select from "react-select";
-//import dog from "./dog.jpg";
+import dog from "./components/dog.jpg";
 
 function App() {
   const [team, setTeam] = useState(teamData);
@@ -34,6 +34,7 @@ function App() {
       role: member.role,
       email: member.email,
       image: "https://loremflickr.com/320/240?random=" + team.length + 1,
+      //image: { dog },
     };
 
     setTeam([...team, newMember]);
