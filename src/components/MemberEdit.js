@@ -1,31 +1,8 @@
 import React, { useState } from "react";
 import ModalForm from "./ModalForm";
-import {
-  Container,
-  Row,
-  Col,
-  Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  FormText,
-} from "reactstrap";
 
 function MemberEdit(props) {
   const [teamMem, setTeamMem] = useState(props.teamMember);
-  //console.log("memberEditProps111111", props);
-  //   const [newMember, setNewMember] = useState({
-  //     firstName: "",
-  //     lastName: "",
-  //     role: "",
-  //     email: "",
-  //     //image: { dog },
-  //   });
 
   const handleChanges = (event) => {
     console.log("Edit event ", event.target.value);
@@ -53,6 +30,7 @@ function MemberEdit(props) {
       firstName={props.teamMember.firstName}
       lastName={props.teamMember.lastName}
       email={props.teamMember.email}
+      select={props.teamMember.role}
       submit={submitForm}
       cancel={cancelForm}
     />

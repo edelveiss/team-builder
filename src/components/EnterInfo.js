@@ -1,47 +1,18 @@
 import React, { useState, useEffect } from "react";
 import ModalForm from "./ModalForm";
-import dog from "./dog.jpg";
-// import Select from "react-select";
-// import makeAnimated from "react-select/animated";
-// import {
-//   Container,
-//   Row,
-//   Col,
-//   Button,
-//   Modal,
-//   ModalHeader,
-//   ModalBody,
-//   ModalFooter,
-//   Form,
-//   FormGroup,
-//   Label,
-//   Input,
-//   FormText,
-// } from "reactstrap";
-// import { makeStyles } from "@material-ui/core/styles";
-// import TextField from "@material-ui/core/TextField";
+//import dog from "../assets/dog.jpg";
 
 const EnterInfo = (props) => {
-  //   function customTheme(theme) {
-  //     return {
-  //       ...theme,
-  //       colors: {
-  //         ...theme.colors,
-  //         primary25: "orange",
-  //         primary: "green",
-  //       },
-  //     };
-  //   }
+  //   const [newMember, setNewMember] = useState({
+  //     firstName: "",
+  //     lastName: "",
+  //     role: "",
+  //     email: "",
 
-  const [newMember, setNewMember] = useState({
-    firstName: "",
-    lastName: "",
-    role: "",
-    email: "",
-    //image: "https://loremflickr.com/320/240?random=8",
-  });
+  //   });
+  const [newMember, setNewMember] = useState({});
 
-  useEffect(() => {}, [newMember]);
+  //useEffect(() => {}, [newMember]);
 
   const handleChanges = (event) => {
     console.log("Enter info event", event.target.value);
@@ -79,14 +50,24 @@ const EnterInfo = (props) => {
       firstName={newMember.firstName}
       lastName={newMember.lastName}
       email={newMember.email}
+      select={newMember.role}
       submit={submitForm}
       cancel={cancelForm}
     />
   );
 };
 export default EnterInfo;
-//onClick={props.toggle}
-//onSubmit={submitForm}
+
+//   function customTheme(theme) {
+//     return {
+//       ...theme,
+//       colors: {
+//         ...theme.colors,
+//         primary25: "orange",
+//         primary: "green",
+//       },
+//     };
+//   }
 
 // <TextField
 //             id="standard-textarea"

@@ -54,6 +54,7 @@ function ModalForm(props) {
               id="roleSelect"
               onChange={props.handleChanges}
             >
+              <option value={props.select}>{props.select}</option>
               <option value="Project architect">Project architect</option>
               <option value="Project manager">Project manager</option>
               <option value="UI/UX designer">UI/UX designer</option>

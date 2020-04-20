@@ -77,12 +77,6 @@ function Member(props) {
           />
         </CardBody>
       </Card>
-
-      <Switch>
-        <Route path={`${path}/edit`}>
-          <MemberEdit person={teamMember} />
-        </Route>
-      </Switch>
     </div>
   );
 }
@@ -100,3 +94,8 @@ export default Member;
 // <nav className="item-sub-nav">
 //             <Link to={`${url}/edit`}>Edit</Link>
 //           </nav>
+// <Switch>
+//         <Route path={`${path}/edit`}>
+//           <MemberEdit person={teamMember} />
+//         </Route>
+//       </Switch>

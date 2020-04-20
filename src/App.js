@@ -8,7 +8,7 @@ import "./App.css";
 import teamData from "./teamData";
 import "bootstrap/dist/css/bootstrap.css";
 import Select from "react-select";
-import dog from "./components/dog.jpg";
+import dog from "./assets/dog.jpg";
 
 function App() {
   const [team, setTeam] = useState(teamData);

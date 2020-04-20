@@ -39,7 +39,7 @@ function TeamList(props) {
     });
     console.log("search results", results);
     setSearchResults(results);
-  }, [searchTerm]);
+  }, [searchTerm, props.team]);
 
   const handleChange = (event) => {
     setSearchTerm(event.target.value);
@@ -47,7 +47,9 @@ function TeamList(props) {
   console.log("searchTerm", searchTerm);
 
   return (
-    <Container style={{ marginRight: "unset", marginTop: "1rem" }}>
+    <Container
+      style={{ marginRight: "unset", marginTop: "1rem", marginBottom: "2rem" }}
+    >
       <Row>
         <TextField
           id="outlined-search"
