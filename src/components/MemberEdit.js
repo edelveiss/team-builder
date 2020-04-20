@@ -79,15 +79,15 @@ function MemberEdit(props) {
             <Label for="roleSelect">Select the role</Label>
             <Input
               type="select"
-              name="roleSelect"
+              name="role"
               id="roleSelect"
               onChange={handleChanges}
             >
               <option value="Project architect">Project architect</option>
               <option value="Project manager">Project manager</option>
-              <option value="3">UI/UX designer</option>
-              <option value="4">Web developer</option>
-              <option value="5">QA and testing specialist</option>
+              <option value="UI/UX designer">UI/UX designer</option>
+              <option value="Web developer">Web developer</option>
+              <option value="QA tester">QA and testing specialist</option>
             </Input>
           </FormGroup>
           <FormGroup>

@@ -6,6 +6,8 @@ import Member from "./components/Member";
 import MemberEdit from "./components/MemberEdit";
 import "./App.css";
 import teamData from "./teamData";
+import "bootstrap/dist/css/bootstrap.css";
+import Select from "react-select";
 //import dog from "./dog.jpg";
 
 function App() {

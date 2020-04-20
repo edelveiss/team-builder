@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import dog from "./dog.jpg";
+import Select from "react-select";
+import makeAnimated from "react-select/animated";
 import {
   Container,
   Row,
@@ -15,9 +17,36 @@ import {
   Input,
   FormText,
 } from "reactstrap";
+// import Dialog from "@material-ui/core/Dialog";
+// import AppBar from "@material-ui/core/AppBar";
+// import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
+// import TextField from "@material-ui/core/TextField";
+//import Button from "@material-ui/core/Button";
+
 //console.log("dog", dog);
 
+const optionRole = [
+  { value: "projectArchitect", label: "Project architect" },
+  { value: "projectManager", label: "Project manager" },
+  { value: "uiDesigner", label: "UI/UX designer" },
+  { value: "webDeveloper", label: "Web developer" },
+  { value: "qaTester", label: "QA and testing specialist" },
+];
+
 const EnterInfo = (props) => {
+  // const [role1, setRole1] = useState("");
+
+  function customTheme(theme) {
+    return {
+      ...theme,
+      colors: {
+        ...theme.colors,
+        primary25: "orange",
+        primary: "green",
+      },
+    };
+  }
+
   const [newMember, setNewMember] = useState({
     firstName: "",
     lastName: "",
@@ -28,6 +57,14 @@ const EnterInfo = (props) => {
 
   useEffect(() => {}, [newMember]);
 
+  //   const handleSelectChange = (e) => {
+  //     setRole1(e.target.value);
+  //     setNewMember({
+  //       role: role1,
+  //     });
+  //   };
+
+  // console.log("role1: ", role1);
   const handleChanges = (event) => {
     console.log("Enter info event", event.target.value);
     setNewMember({ ...newMember, [event.target.name]: event.target.value });
@@ -75,21 +112,35 @@ const EnterInfo = (props) => {
               value={newMember.lastName}
             />
           </FormGroup>
+          {/*  
+
+          <Select
+            name="role"
+            theme={customTheme}
+            options={optionRole}
+            onChange={handleChanges}
+            className="mb-3"
+            placeholder="Select role"
+            isSearchable
+          />
+          */}
+          {/* */}
           <FormGroup>
             <Label for="roleSelect">Select the role</Label>
             <Input
               type="select"
-              name="roleSelect"
+              name="role"
               id="roleSelect"
               onChange={handleChanges}
             >
-              <option value="1">Project architect</option>
-              <option value="2">Project manager</option>
-              <option value="3">UI/UX designer</option>
-              <option value="4">Web developer</option>
-              <option value="5">QA and testing specialist</option>
+              <option value="Project architect">Project architect</option>
+              <option value="Project manager">Project manager</option>
+              <option value="UI/UX designer">UI/UX designer</option>
+              <option value="Web developer">Web developer</option>
+              <option value="QA tester">QA and testing specialist</option>
             </Input>
           </FormGroup>
+          {/* */}
           <FormGroup>
             <Label for="email">Email</Label>
             <Input
