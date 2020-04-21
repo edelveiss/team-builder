@@ -12,6 +12,7 @@ import dog from "./assets/dog.jpg";
 
 function App() {
   const [team, setTeam] = useState(teamData);
+  console.log("team dog", team);
 
   //useEffect(() => {}, [team]);
 
@@ -72,7 +73,11 @@ function App() {
         </Route>
 
         <Route path="/team-list">
-          <TeamList team={team} addNewMember={addNewMember} />
+          <TeamList
+            team={team}
+            addNewMember={addNewMember}
+            editMember={editMember}
+          />
         </Route>
         <Route path="/">
           <Home />

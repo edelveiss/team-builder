@@ -1,7 +1,19 @@
 //import React from "react";
 //import m1 from "./assets/m1.png";
 
-//var imageM1 = require("./assets/dog.jpg");
+//const dog1 = require("./assets/dog.jpg");
+import dog1 from "./assets/dog.jpg";
+import m1 from "./assets/m1.png";
+import M2 from "./assets/M2.png";
+import M3 from "./assets/M3.png";
+import M4 from "./assets/M4.png";
+import M5 from "./assets/M5.png";
+
+import M7 from "./assets/M7.png";
+import M8 from "./assets/M8.png";
+import M9 from "./assets/M9.png";
+import M10 from "./assets/M10.png";
+import M11 from "./assets/M11.png";
 
 const teamData = [
   {
@@ -10,7 +22,8 @@ const teamData = [
     lastName: "Speedwagon",
     role: "Project architect",
     email: "marioSpeedwagon@gmail.com",
-    image: "https://loremflickr.com/320/240?random=1",
+    //image: "https://loremflickr.com/320/240?random=1",
+    image: m1,
     //image: "https://images.dog.ceo/breeds/hound-basset/n02088238_1261.jpg",
   },
   {
@@ -19,7 +32,8 @@ const teamData = [
     lastName: "Cruiser",
     role: "Project manager",
     email: "peteyCruiser@gmail.com",
-    image: "https://loremflickr.com/320/240?random=2",
+    image: M2,
+    //image: "https://loremflickr.com/320/240?random=2",
     //image: "https://images.dog.ceo/breeds/hound-english/n02089973_3307.jpg",
   },
   {
@@ -28,7 +42,8 @@ const teamData = [
     lastName: "Sthesia",
     role: "UI/UX designer",
     email: "annaSthesia@gmail.com",
-    image: "https://loremflickr.com/320/240?random=3",
+    image: M9,
+    //image: "https://loremflickr.com/320/240?random=3",
     //image: "https://images.dog.ceo/breeds/hound-afghan/n02088094_8063.jpg",
   },
   {
@@ -37,7 +52,8 @@ const teamData = [
     lastName: "Molive",
     role: "UI/UX designer",
     email: "paulMolive@gmail.com",
-    image: "https://loremflickr.com/320/240?random=4",
+    image: M4,
+    //image: "https://loremflickr.com/320/240?random=4",
     //image: "https://images.dog.ceo/breeds/hound-walker/n02089867_1882.jpg",
   },
   {
@@ -46,7 +62,8 @@ const teamData = [
     lastName: "Mull",
     role: "Web developer",
     email: "annaMull@gmail.com",
-    image: "https://loremflickr.com/320/240?random=5",
+    image: M8,
+    // image: "https://loremflickr.com/320/240?random=5",
     //image: "https://images.dog.ceo/breeds/hound-blood/n02088466_6834.jpg",
   },
   {
@@ -55,7 +72,8 @@ const teamData = [
     lastName: "Forcewind",
     role: "Web developer",
     email: "gailForcewind@gmail.com",
-    image: "https://loremflickr.com/320/240?random=6",
+    image: M7,
+    //image: "https://loremflickr.com/320/240?random=6",
     //image: "https://images.dog.ceo/breeds/hound-basset/n02088238_11281.jpg",
   },
   {
@@ -64,7 +82,8 @@ const teamData = [
     lastName: "Frapples",
     role: "Web developer",
     email: "bobFrapples@gmail.com",
-    image: "https://loremflickr.com/320/240?random=7",
+    image: M5,
+    //image: "https://loremflickr.com/320/240?random=7",
     //image: "https://images.dog.ceo/breeds/hound-english/n02089973_3119.jpg",
   },
 ];

@@ -3,14 +3,13 @@ import ModalForm from "./ModalForm";
 //import dog from "../assets/dog.jpg";
 
 const EnterInfo = (props) => {
-  //   const [newMember, setNewMember] = useState({
-  //     firstName: "",
-  //     lastName: "",
-  //     role: "",
-  //     email: "",
-
-  //   });
-  const [newMember, setNewMember] = useState({});
+  const [newMember, setNewMember] = useState({
+    firstName: "",
+    lastName: "",
+    role: "",
+    email: "",
+  });
+  //const [newMember, setNewMember] = useState({});
 
   //useEffect(() => {}, [newMember]);
 
@@ -23,6 +22,7 @@ const EnterInfo = (props) => {
     event.preventDefault();
     props.toggle();
     props.teamListProps.addNewMember(newMember);
+    //props.teamListProps.editMember(newMember);
     setNewMember({
       firstName: "",
       lastName: "",
